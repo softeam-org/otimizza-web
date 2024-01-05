@@ -15,6 +15,10 @@ export default {
         "midnight-blue": "#0E131F",
         "iron-gray": "#565656",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        azonix: ["Azonix", "sans-serif"],
+      },
     },
   },
   plugins: [daisyui],
