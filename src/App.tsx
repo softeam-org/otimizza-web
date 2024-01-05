@@ -1,5 +1,11 @@
 function App() {
-  return <h1 className="font-bold text-midnight-blue">Otimizza WEB</h1>;
+  return (
+    <>
+      <button className="btn bg-yellow font-bold text-midnight-blue">
+        Otimizza WEB
+      </button>
+    </>
+  );
 }
 
 export default App;
