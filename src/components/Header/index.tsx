@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 import { useSecao } from "../../contexts/useSecao"
-
 import IconWhatsApp from "../../icons/Icon-WhatsApp.svg"
 import IconX from "../../icons/Icon-X.svg"
 import IconMenu from "../../icons/Menu-Mobile.svg"

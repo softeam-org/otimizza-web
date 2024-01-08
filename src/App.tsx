@@ -1,14 +1,13 @@
 import Header from "@components/Header";
+
 import { SecaoProvider } from "./contexts/useSecao";
 
 function App() {
 
   return (
-   <>
-    <SecaoProvider>
+   <SecaoProvider>
       <Header />
     </SecaoProvider>
-   </>
   );
 }
 
