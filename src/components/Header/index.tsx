@@ -36,7 +36,7 @@ export function Header() {
  
   return (
     <header
-        className={`fixed flex justify-between align-center bg-white lg:min-h-20 lg:py-0 px-3 py-3 top-0 w-full ${mobileMenu ? "h-full" : ""}`}
+        className={`fixed flex justify-between align-center bg-white lg:min-h-20 lg:py-0 px-16 py-3 top-0 w-full ${mobileMenu ? "h-full" : ""}`}
     >
       <div
         className="flex items-center"
