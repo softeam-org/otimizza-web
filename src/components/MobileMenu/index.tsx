@@ -46,7 +46,7 @@ const sections = [
           </button>
         </div>
   
-        <div className="py-6">
+        <div className="py-8">
           {sections.map((section) => (
             <div
               key={section.name}
@@ -59,7 +59,7 @@ const sections = [
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 mt-48">
           <a
             className="flex items-center bg-green text-snow-white font-montserrat font-semibold rounded-full py-1.5 pl-0.5 pr-1.5 mx-auto max-w-40"
             href="/"
