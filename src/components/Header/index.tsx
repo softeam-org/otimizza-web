@@ -52,9 +52,9 @@ export function Header() {
             <a
               key={section.name}
               href=""
-              className={`flex items-center  font-montserrat h-full transition hover:bg-secondary hover:text-snow-white ${section.name === secaoAtiva ? "bg-secondary text-snow-white" : ""}`}
+              className={`flex items-center  font-montserrat h-full text-lg transition hover:bg-secondary hover:text-snow-white ${section.name === secaoAtiva ? "bg-secondary text-snow-white" : ""}`}
             >
-              <p className="font-azonix px-3">
+              <p className="font-azonix px-3.5">
                 {section.name.toLocaleUpperCase().replace('SOBRE', 'SOBRE NOS')}
               </p>
             </a>
