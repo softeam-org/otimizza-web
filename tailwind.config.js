@@ -8,6 +8,9 @@ export default {
       screens: {
         xsm: "560px",
       },
+      height: {
+        58: "14.5rem",
+      },
       colors: {
         primary: "#273257",
         secondary: "#2C3A64",
