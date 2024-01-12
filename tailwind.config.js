@@ -5,6 +5,9 @@ export default {
   content: ["./src/**/*.{html,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xsm: "560px",
+      },
       colors: {
         primary: "#273257",
         secondary: "#2C3A64",
