@@ -1,12 +1,7 @@
+import { Footer } from "@components/Footer";
+
 function App() {
-  return (
-    <button
-      className="btn bg-yellow font-bold font-azonix text-midnight-blue"
-      type="button"
-    >
-      Otimizza WEB
-    </button>
-  );
+  return <Footer />;
 }
 
 export default App;
