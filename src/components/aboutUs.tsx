@@ -9,7 +9,7 @@ function AboutUs() {
       <div className="flex flex-col items-center space-y-14 md:space-y-20 flex-1">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-4xl font-azonix">SOBRE NÓS</h1>
-          <p>&quot;"Seu sonho, nossa responsabilidade"&quot;</p>
+          <p>&quot;Seu sonho, nossa responsabilidade&quot;</p>
         </div>
         <div className="space-y-2">
           <p>Mais do que projetar, a Otimizza surge para fazer acontecer.</p>
