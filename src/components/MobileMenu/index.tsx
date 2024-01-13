@@ -1,9 +1,9 @@
 
 import { useState, useEffect } from "react"
 import { useSecao } from "../../contexts/useSecao"
-import IconWhatsApp from "../../icons/Icon-WhatsApp.svg"
-import IconX from "../../icons/Icon-X.svg"
-import LogoOtimiza from "../../images/LOGO_OTIMIZA.png"
+import IconWhatsApp from "../../assets/icons/Icon-WhatsApp.svg"
+import IconX from "../../assets/icons/Icon-X.svg"
+import LogoOtimiza from "../../assets/images/LOGO_OTIMIZA.png"
 
 
 

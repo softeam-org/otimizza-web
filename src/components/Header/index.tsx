@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-import IconMenu from "../../icons/Menu-Mobile.svg"
-import LogoOtimiza from "../../images/LOGO_OTIMIZA.png"
+import IconMenu from "../../assets/icons/Menu-Mobile.svg"
+import LogoOtimiza from "../../assets/images/LOGO_OTIMIZA.png"
 import { MobileMenu } from "@components/MobileMenu";
 import { useSecao } from "@/contexts/useSecao";
 
@@ -36,12 +36,14 @@ export function Header() {
  
   return (
     <header
-        className={`fixed flex justify-between align-center bg-white lg:min-h-20 lg:py-0 px-16 py-3 top-0 w-full ${mobileMenu ? "h-full" : ""}`}
+        className={`fixed flex justify-between align-center bg-white lg:min-h-20 lg:py-0 lg:px-16 px-3 py-3 top-0 w-full ${mobileMenu ? "h-full" : ""}`}
     >
       <div
         className="flex items-center"
       >
-        <a href="" >
+        <a
+          className="xl:w-64 w-44"
+        href="" >
           <img src={LogoOtimiza} alt="Otimiza Engenharia" />
         </a>
       </div>
