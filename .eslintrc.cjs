@@ -21,6 +21,7 @@ module.exports = {
     "react/jsx-pascal-case": "error",
     "react/react-in-jsx-scope": "off",
     "react/jsx-no-useless-fragment": "warn",
+    "react-refresh/only-export-components" : "off",
     "import-helpers/order-imports": [
       "warn",
       {
@@ -33,7 +34,13 @@ module.exports = {
           ["parent", "sibling", "index"],
         ],
         alphabetize: { order: "asc", ignoreCase: true },
+        
       },
     ],
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 };
