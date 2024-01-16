@@ -3,7 +3,7 @@ import Slider2 from "@/assets/slider_2.jpeg";
 import Slider3 from "@/assets/slider_3.jpg";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 
-export default function Slider() {
+function Slider() {
   return (
     <div className="carousel w-full">
       <div id="slide1" className="carousel-item relative w-full">
@@ -88,3 +88,5 @@ export default function Slider() {
     </div>
   );
 }
+
+export { Slider };
