@@ -1,17 +1,16 @@
-import Services from '@components/services';
+
+import { Footer } from "@components/Footer";
+import { Header } from "@components/Header";
+
+import { SecaoProvider } from "./contexts/useSecao";
 
 function App() {
+
   return (
-    <div>
-      <button
-      className="btn bg-yellow font-bold font-azonix text-midnight-blue"
-      type="button"
-    >
-        Otimizza WEB
-      </button>
-      <Services/>
-    </div>
-    
+   <SecaoProvider>
+      <Header />
+      <Footer />;
+    </SecaoProvider>
   );
 }
 
