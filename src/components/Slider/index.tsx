@@ -1,14 +1,14 @@
+import Slider1 from "@/assets/slider_1.png";
+import Slider2 from "@/assets/slider_2.jpeg";
+import Slider3 from "@/assets/slider_3.jpg";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
-import Slider1 from "../../assets/slider_1.png";
-import Slider2 from "../../assets/slider_2.jpeg";
-import Slider3 from "../../assets/slider_3.jpg";
 
 export default function Slider() {
   return (
     <div className="carousel w-full">
       <div id="slide1" className="carousel-item relative w-full">
         <div className="w-full">
-          <div className="bg-iron-gray p-4 h-20 justify-center items-center flex absolute w-full opacity-[0.7]">
+          <div className="bg-iron-gray p-4 h-14 md:h-20 justify-center items-center flex absolute w-full opacity-[0.7]">
             <p className="text-snow-white font-azonix text-center">
               Acompanhamento
             </p>
@@ -37,7 +37,7 @@ export default function Slider() {
       </div>
       <div id="slide2" className="carousel-item relative w-full">
         <div className="w-full">
-          <div className="bg-iron-gray p-4 h-20 justify-center items-center flex absolute w-full opacity-[0.7]">
+          <div className="bg-iron-gray p-4 h-14 md:h-20 justify-center items-center flex absolute w-full opacity-[0.7]">
             <p className="text-snow-white font-azonix text-center">Execução</p>
           </div>
           <img
@@ -62,7 +62,7 @@ export default function Slider() {
       </div>
       <div id="slide3" className="carousel-item relative w-full">
         <div className="w-full">
-          <div className="bg-iron-gray p-4 h-20 justify-center items-center flex absolute w-full opacity-[0.7]">
+          <div className="bg-iron-gray p-4 h-14 md:h-20 justify-center items-center flex absolute w-full opacity-[0.7]">
             <p className="text-snow-white font-azonix text-center">Projeto</p>
           </div>
           <img
