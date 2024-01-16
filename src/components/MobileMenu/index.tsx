@@ -54,7 +54,7 @@ const sections = [
                 ${secaoAtiva === section.name ? ' bg-secondary text-snow-white' : ''}`}
             >
               <a href="">
-                <p className="font-azonix">{section.name}</p>
+                <p className="font-azonix">{section.name.toLocaleUpperCase().replace('SOBRE', 'SOBRE NOS')}</p>
               </a>
             </div>
           ))}
