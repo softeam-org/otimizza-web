@@ -11,6 +11,9 @@ export default {
       height: {
         58: "14.5rem",
       },
+      boxShadow: {
+        card: '0px 5px 5px 0px #000',
+      },
       colors: {
         primary: "#273257",
         secondary: "#2C3A64",

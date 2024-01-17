@@ -1,11 +1,11 @@
 import { useState } from "react"
 
+import { MobileMenu } from "@components/MobileMenu";
+
 import IconMenu from "../../assets/icons/Menu-Mobile.svg"
 import LogoOtimiza from "../../assets/images/LOGO_OTIMIZA.png"
-import { MobileMenu } from "@components/MobileMenu";
+
 import { useSecao } from "@/contexts/useSecao";
-
-
 
 const sections = [
   {

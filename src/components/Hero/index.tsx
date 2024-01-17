@@ -1,5 +1,6 @@
-import presentation from "@/assets/slider_3.jpg";
 import { Slider } from "@components/Slider";
+
+import presentation from "@/assets/slider_3.jpg";
 import { Envelope, Phone } from "@phosphor-icons/react";
 
 function Hero() {
