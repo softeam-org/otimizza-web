@@ -7,8 +7,6 @@ import LogoOtimiza from "../../assets/images/LOGO_OTIMIZA.png"
 
 import { useSecao } from "@/contexts/useSecao";
 
-
-
 const sections = [
   {
     name: "Início"

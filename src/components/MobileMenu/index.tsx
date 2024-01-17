@@ -8,8 +8,6 @@ import { useSecao } from "../../contexts/useSecao"
 
 
 
-
-
 const sections = [
     {
       name: "Início"
