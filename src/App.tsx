@@ -1,14 +1,15 @@
-import { AboutUs } from "@components/AboutUS";
+import { AboutUs } from "@components/AboutUs";
 import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
+import { Hero } from "@components/Hero";
 
 import { SecaoProvider } from "./contexts/useSecao";
 
 function App() {
-
   return (
-   <SecaoProvider>
+    <SecaoProvider>
       <Header />
+      <Hero />
       <AboutUs />
       <Footer />
     </SecaoProvider>
