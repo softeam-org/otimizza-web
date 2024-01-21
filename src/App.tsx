@@ -8,10 +8,12 @@ import { SecaoProvider } from "./contexts/useSecao";
 function App() {
   return (
     <SecaoProvider>
-      <Header />
-      <Hero />
-      <AboutUs />
-      <Footer />
+      <div className="max-w-[1440px] flex flex-col m-auto pt-20">
+        <Header />
+        <Hero />
+        <AboutUs />
+        <Footer />
+      </div>
     </SecaoProvider>
   );
 }
