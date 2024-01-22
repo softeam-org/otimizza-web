@@ -31,7 +31,7 @@ function Footer(): JSX.Element {
       <div className="py-1 h-9 max-md:py-5 xsm:py-8 md:py-1 max-md:justify-center max-md:flex-col px-3 bg-midnight-blue flex items-center justify-between w-full">
         <p>Otimizza Engenharia - CNPJ 37.122.815/0001-53</p>
         <p>
-          Desenvolvido por <strong>Softeam</strong>
+          Desenvolvido por <a href="https://softeam.com.br/" target="_blank" rel="noopener noreferrer"><strong>Softeam</strong></a>
         </p>
       </div>
     </footer>
