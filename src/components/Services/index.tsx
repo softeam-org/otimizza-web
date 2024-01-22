@@ -1,4 +1,4 @@
-import { Card2 } from "@components/Card2";
+import { ServiceCard } from "@components/ServiceCard";
 
 function Services(): JSX.Element {
   return (
@@ -13,19 +13,19 @@ function Services(): JSX.Element {
         </div>
       </div>
       <div className="flex gap-8 flex-1 flex-col md:flex-row flex-wrap lg:flex-nowrap justify-center">
-        <Card2
+        <ServiceCard
           title="PROJETOS DE ENGENHARIA"
           text={"Nesta fase são tomadas as decisões mais importantes sobre custos, velocidade e execução do seu empreendimento."}
         />
-        <Card2
+        <ServiceCard
           title="REGULARIZAÇÃO DE IMÓVEIS"
           text={"O primeiro passo para ter acesso a um Financiamento Habitacional e reformar, construir ou comercializar o seu imóvel, é torná-lo regular."}
         />
-        <Card2
+        <ServiceCard
           title="GERENCIAMENTO E EXECUÇÃO DE OBRA"
           text={"Seus recursos são valiosos e devem ser bem gerenciados, além disso, precisamos garantir a qualidade da execução dos serviços!"}
         />
-        <Card2
+        <ServiceCard
           title="ORÇAMENTO"
           text={"Visualize e faça previsão do investimento necessário para tornar seu projeto real."}
         />
