@@ -1,10 +1,9 @@
-import "./styles.css";
 import logoOtimizzaSvg from "@/assets/logo_otimizza_footer.svg";
 import { MapPin, Phone, Envelope } from "@phosphor-icons/react";
 
 function Footer(): JSX.Element {
   return (
-    <footer className="container2 h-58 flex flex-col text-white font-montserrat text-sm xsm:text-xl">
+    <footer className="w-full h-58 flex flex-col text-white font-montserrat text-sm xsm:text-xl">
       <div className="px-16 pt-11 pb-8 max-md:px-8 max-lg:px-10 max-sm:gap-10 bg-primary flex flex-col-reverse sm:flex-row  justify-between items-center">
         <div className="flex flex-col gap-2.5">
           <div className="flex items-center gap-1">
