@@ -34,7 +34,7 @@ const sections = [
   
     return (
       <div
-        className={`bg-white z-40 lg:hidden absolute top-0 left-0 w-full h-full pt-6 transition-opacity ${isVisible ? 'opacity-100' : 'opacity-0 '}`}
+        className={`bg-white z-40 lg:hidden top-0 left-0 w-full h-full pt-6 transition-opacity ${isVisible ? 'opacity-100 absolute' : 'opacity-0 hidden'}`}
       >
         <div className="flex justify-end pb-6 px-3">
           <button
