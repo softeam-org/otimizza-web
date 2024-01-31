@@ -33,7 +33,6 @@ export function Header() {
   }
 
   const closeMobileMenu = () => {
-    console.log("Close Mobile Menu");
     setMobileMenu(false);
     document.body.classList.toggle("overflow-hidden", false);
   }
