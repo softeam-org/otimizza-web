@@ -7,6 +7,7 @@ export default {
     extend: {
       screens: {
         xsm: "560px",
+        xlg: "800px"
       },
       height: {
         58: "14.5rem",

@@ -43,7 +43,7 @@ const sections = [
       return () => {
         window.removeEventListener('resize', handleResize);
       };
-    }, []);
+    }, [closeMenu]);
 
    useEffect(() => {
     setIsVisible(isOpen)
