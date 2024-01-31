@@ -9,6 +9,51 @@ import NotePad from "../../assets/chooseIcons/notepad.svg"
 
 import './style.css'
 
+interface CardProps {
+  image: string;
+  text: string;
+  alt: string;
+  hover: string;
+}
+
+const cardsData: CardProps[] = [
+  {
+    image: NotePad,
+    text: "RESPONSABILIDADE",
+    alt: "imagem ilustrativa de um bloco de notas",
+    hover: "Uma vez fechado o acordo, nossa missão é com a entrega e satisfação."
+  },
+  {
+    image: Ecology,
+    text: "RESPEITO ÀS PESSOAS E MEIO AMBIENTE",
+    alt: "Imagem ilustrativa do meio ambiente",
+    hover: "Afinal, buscamos melhorar a qualidade de vida dos nossos clientes."
+  },
+  {
+    image: Balance,
+    text: "ÉTICA",
+    alt: "Imagem ilustrativa de uma balança",
+    hover: "Honestidade e transparência guiam nossas ações."
+  },
+  {
+    image: Chart,
+    text: "EFICIÊNCIA",
+    alt: "Imagem ilustrativa de um gráfico",
+    hover: "Trabalhamos com base em estratégias produtivas."
+  },
+  {
+    image: Creative,
+    text: "INOVAÇÃO",
+    alt: "Imagem ilustrativa de papel e lápis para representar o processo criativo",
+    hover: "Resolvemos problemas complexos com soluções inovadoras."
+  },
+  {
+    image: Achievement,
+    text: "ORGULHO DE SER OTIMIZZA",
+    alt: "Imagem ilustrativa de uma medalha",
+    hover: "Acreditamos em uma Engenharia Acessível e Universal e na transformação que ela proporciona."
+  },
+];
 
 function ChooseOtimizza(): JSX.Element {
   return (
@@ -18,36 +63,15 @@ function ChooseOtimizza(): JSX.Element {
           Por que escolher a Otimizza?
         </div>
         <div className="flex flex-wrap gap-3 self-stretch	justify-center">
-          <ChooseCard
-            image={NotePad}
-            text="RESPONSABILIDADE"
-            alt="imagem ilutrativa de um bloco de notas"
-            hover="Uma vez fechado o acordo, nossa missão é com a entrega e satisfação."/>
-          <ChooseCard
-            image={Ecology}
-            text="RESPEITO ÀS PESSOAS E MEIO AMBIENTE"
-            alt="Imagem ilustrativa do meio ambiente"
-            hover="Afinal, buscamos melhorar a qualidade de vida do nossos clientes."/>            
-          <ChooseCard
-            image={Balance}
-            text="ÉTICA"
-            alt="Imagem ilustrativa de uma balança"
-            hover="Honestidade e transparência guiam nossas ações."/>
-          <ChooseCard
-            image={Chart}
-            text="EFICIÊNCIA"
-            alt="Imagem ilustrativa de um gráfico"
-            hover="Trabalhamos com base em estratégias produtivas."/>
-          <ChooseCard
-            image={Creative}
-            text="INOVAÇÃO"
-            alt="Imagem ilustrativa de papel e lápis para representar o processo criativo"
-            hover="Resolvemos problemas complexos com soluções inovadoras."/>
-          <ChooseCard
-            image={Achievement}
-            text="ORGULHO DE SER OTIMIZZA" 
-            alt="Imagem ilustrativa de uma medalha" 
-            hover="Acreditamos em uma Engenharia Acessível e Universal e na transformação que ela proporciona."/>
+          {cardsData.map(({ text, image, alt, hover }) => (
+            <ChooseCard
+              key={text}
+              image={image}
+              text={text}
+              alt={alt}
+              hover={hover}
+            />
+          ))}
         </div>
       </div>
     </div>
