@@ -23,23 +23,40 @@ const sections = [
     },
   ]
   
-  export function MobileMenu({ handleMobileMenu, isOpen }: { handleMobileMenu: () => void, isOpen: boolean}) {
-    const [isVisible, setIsVisible] = useState(isOpen);
+  export function MobileMenu({ closeMenu, isOpen }: { closeMenu: () => void, isOpen: boolean}) {
+    const [isVisible, setIsVisible] = useState(false);
     const { secaoAtiva }: { secaoAtiva: string } = useSecao();
   
-    // Atualiza a visibilidade do componente com base na propriedade isOpen
+    //Checa o tamanho da tela para fechar menu
     useEffect(() => {
-      setIsVisible(isOpen);
-    }, [isOpen]);
+      const handleResize = () => {
+        const larguraTela = window.innerWidth;
+        const larguraMinima = 1024;
+        if (larguraTela > larguraMinima) {
+          closeMenu();
+          setIsVisible(false);
+        }
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+   useEffect(() => {
+    setIsVisible(isOpen)
+   }, [isOpen])
   
     return (
       <div
-        className={`bg-white z-40 lg:hidden absolute top-0 left-0 w-full h-full pt-6 transition-opacity ${isVisible ? 'opacity-100' : 'opacity-0 '}`}
+        className={`bg-white z-40 lg:hidden top-0 left-0 w-full h-full pt-6 transition-opacity ${isVisible ? 'opacity-100 absolute' : 'opacity-0 hidden'}`}
       >
         <div className="flex justify-end pb-6 px-3">
           <button
             type="button"
-            onClick={handleMobileMenu}
+            onClick={() => closeMenu()}
             className="flex content-center font-montserrat gap-1"
           >
             <p>VOLTAR</p>
