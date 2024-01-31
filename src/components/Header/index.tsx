@@ -27,11 +27,16 @@ export function Header() {
 
   const { secaoAtiva }: { secaoAtiva: string } = useSecao();
 
-  const handleMobileMenu = () => {
-    setMobileMenu(!mobileMenu);
-    document.body.classList.toggle("overflow-hidden", !mobileMenu);
-  };
+  const openMobileMenu = () => {
+    setMobileMenu(true);
+    document.body.classList.toggle("overflow-hidden", true);
+  }
 
+  const closeMobileMenu = () => {
+    console.log("Close Mobile Menu");
+    setMobileMenu(false);
+    document.body.classList.toggle("overflow-hidden", false);
+  }
   return (
     <header
       className={`fixed z-10 flex justify-between align-center bg-white lg:min-h-20 lg:py-0 lg:px-16 px-3 py-3 top-0 max-w-[1440px] w-full ${
@@ -62,14 +67,14 @@ export function Header() {
         className="lg:hidden"
         type="button"
         onClick={() => {
-          handleMobileMenu();
+          openMobileMenu();
         }}
       >
         <img src={IconMenu} alt="Menu" />
       </button>
 
       <MobileMenu
-        handleMobileMenu={() => handleMobileMenu()}
+        closeMenu={() => closeMobileMenu()}
         isOpen={mobileMenu}
       />
     </header>
