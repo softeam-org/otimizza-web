@@ -2,7 +2,7 @@ import { ServiceCard } from "@components/ServiceCard";
 
 function Services(): JSX.Element {
   return (
-    <div className="flex flex-col justify-arround bg-white py-11 px-3 xsm:px-16 items-center font-montserrat text-lg xsm:text-2xl gap-14 md:space-x-30 max-w-1440px">
+    <div className="secao secao-servicos flex flex-col justify-arround bg-white py-11 px-3 xsm:px-16 items-center font-montserrat text-lg xsm:text-2xl gap-14 md:space-x-30 max-w-1440px">
       <div className="flex flex-col items-center space-y-10 md:space-y-15 flex-1">
         <div className="flex flex-col items-center text-center text-primary">
           <h1 className="text-xl xsm:text-5xl font-azonix">SERVIÇOS</h1>

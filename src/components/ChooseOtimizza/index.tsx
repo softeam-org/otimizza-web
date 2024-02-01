@@ -57,7 +57,7 @@ const cardsData: CardProps[] = [
 
 function ChooseOtimizza(): JSX.Element {
   return (
-    <div className="choose-otimizza flex w-full h-auto px-3 py-10 xlg:px-16 xlg:py-11 justify-center gap-2.5 font-azonix text-secondary">
+    <div className=" secao secao-servicos choose-otimizza flex w-full h-auto px-3 py-10 xlg:px-16 xlg:py-11 justify-center gap-2.5 font-azonix text-secondary">
       <div className="flex flex-col p-4 items-center bg-[#DFEAEF] max-w-[1011px] gap-7">
         <div className="text-xl md:text-2xl text-center lg:text-5xl">
           Por que escolher a Otimizza?
