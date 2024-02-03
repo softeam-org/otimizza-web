@@ -9,16 +9,16 @@ import { useSecao } from "@/contexts/useSecao";
 
 const sections = [
   {
-    name: "Início",
+    name: "inicio",
   },
   {
-    name: "Sobre",
+    name: "sobre",
   },
   {
-    name: "Serviços",
+    name: "servicos",
   },
   {
-    name: "Contato",
+    name: "contato",
   },
 ];
 

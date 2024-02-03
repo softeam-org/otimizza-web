@@ -5,7 +5,7 @@ import { Envelope, Phone } from "@phosphor-icons/react";
 
 function Hero() {
   return (
-    <div className="items-center justify-center w-full flex flex-col mx-auto">
+    <div className="secao secao-inicio items-center justify-center w-full flex flex-col mx-auto">
       <Slider />
       <div className="flex flex-row gap-16 items-center justify-center p-12 md:p-16">
         <img
