@@ -22,19 +22,19 @@ const cardsData: CardProps[] = [
     image: HandHeart,
     text: "RESPONSABILIDADE",
     alt: "imagem ilustrativa de um bloco de notas",
-    hover: "Uma vez fechado o acordo, nossa missão é com a entrega e satisfação."
+    hover: "Priorizamos a transparência, a qualidade e o comprometimento para garantir que cada projeto seja concluído com excelência."
   },
   {
     image: GlobeHemisphereWest,
     text: "RESPEITO ÀS PESSOAS E MEIO AMBIENTE",
     alt: "Imagem ilustrativa do meio ambiente",
-    hover: "Afinal, buscamos melhorar a qualidade de vida dos nossos clientes."
+    hover: "Cultivamos uma cultura que prioriza a segurança, o bem-estar e a sustentabilidade em cada etapa de nossos projetos."
   },
   {
     image: Scales,
     text: "ETICA",
     alt: "Imagem ilustrativa de uma balança",
-    hover: "Honestidade e transparência guiam nossas ações."
+    hover: "Honestidade e transparência são o alicerce de nossas operações, orientando cada decisão que tomamos."
   },
   {
     image: ChartLineUp,
@@ -52,7 +52,7 @@ const cardsData: CardProps[] = [
     image: Star,
     text: "ORGULHO DE SER OTIMIZZA",
     alt: "Imagem ilustrativa de uma medalha",
-    hover: "Acreditamos em uma Engenharia Acessível e Universal e na transformação que ela proporciona."
+    hover: "Acreditamos que a engenharia deve ser acessível e universal, inspirando soluções que transformam o mundo ao nosso redor."
   },
 ];
 
