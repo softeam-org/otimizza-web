@@ -7,7 +7,7 @@ interface CardProps {
 
 function ChooseCard({ image, text, alt, hover }: CardProps): JSX.Element {
   return (
-    <div className="relative flex flex-col w-full justify-center p-2.5 py-14 my-1 xsm:py-4 xsm:my-0 bg-snow-white gap-7 text-xl xsm:text-2xl xsm:max-w-[230px] xlg:max-w-[300px] xl:max-h-[200px] items-center">
+    <div className="relative flex flex-col w-full justify-center p-2.5 py-14 my-1 xsm:py-4 xsm:my-0 bg-snow-white gap-7 text-2xl xsm:max-w-[230px] xlg:max-w-[300px] xl:max-h-[200px] items-center">
       <img
         className="xsm:max-w-[80px] xlg:max-w-[105px]"
         src={image}
