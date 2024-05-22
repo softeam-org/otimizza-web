@@ -1,24 +1,35 @@
 import { Slider } from "@components/Slider";
 
 import presentation from "@/assets/slider_3.jpg";
+import { useSecao } from "@/contexts/useSecao";
 import { Envelope, Phone } from "@phosphor-icons/react";
 
 function Hero() {
+  const { getRef } = useSecao();
+  
+  const ref = getRef('inicio');
   return (
-    <div className="secao secao-inicio items-center justify-center w-full flex flex-col mx-auto">
+    <div ref={ref} className="secao secao-inicio items-center justify-center w-full flex flex-col mx-auto scroll-my-16 xsm:scroll-my-20">
       <Slider />
       <div className="flex flex-row gap-16 items-center justify-center p-12 md:p-16">
         <img
           src={presentation}
-          className="w-[600px] h-[300px] object-cover hidden md:block"
+          className="w-[600px] h-[400px] object-cover hidden md:block"
         />
         <div className="flex flex-col items-center justify-center gap-6 max-w-[500px]">
-          <h1 className="text-primary font-azonix text-lg text-center md:text-4xl">
+          <h1 className="text-primary font-azonix text-xl text-center md:text-4xl">
             Estamos ao seu lado do início ao fim da obra
           </h1>
           <p className="text-iron-gray font-montserrat text-md text-center md:text-lg">
-            É necessário garantir que as soluções adotadas sejam realizadas, de
-            forma segura e econômica também.
+            Nosso compromisso vai além da execução do projeto, nós nos dedicamos
+            a compreender as necessidades específicas de cada cliente,
+            trabalhando em estreita colaboração para garantir que todas as
+            etapas do processo sejam realizadas com excelência.
+          </p>
+          <p className="text-iron-gray font-montserrat text-md text-center md:text-lg">
+            Desde a concepção inicial até a conclusão da obra, nossa equipe está
+            sempre disponível para oferecer suporte, solucionar problemas e
+            assegurar a sua satisfação.
           </p>
         </div>
       </div>

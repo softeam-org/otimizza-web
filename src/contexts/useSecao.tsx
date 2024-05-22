@@ -1,11 +1,15 @@
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { RefObject, createContext, useContext, useEffect, useRef, useState } from "react";
 
 interface SecaoContextProps {
   secaoAtiva: string;
+  scrollTo: (refName : string) => void;
+  getRef: (section: string) => RefObject<HTMLDivElement>| null;
 }
 
 const SecaoContext = createContext<SecaoContextProps>({
   secaoAtiva: "",
+  scrollTo: () => {},
+  getRef: () => null,
 });
 
 export const useSecao = () => {
@@ -13,9 +17,40 @@ export const useSecao = () => {
   return context;
 };
 
+
+
 export const SecaoProvider = ({ children }: { children: React.ReactNode }) => {
   const [secaoAtiva, setSecaoAtiva] = useState<string>("");
-  const secoesRef = useRef<NodeListOf<HTMLElement> | null>(null);
+  const secoesRef = useRef<NodeListOf<HTMLDivElement> | null>(null);
+  const inicioRef = useRef<HTMLDivElement | null>(null);
+  const sobreRef = useRef<HTMLDivElement | null>(null);
+  const servicosRef = useRef<HTMLDivElement | null>(null);
+  const contatoRef = useRef<HTMLDivElement | null>(null);
+  
+
+  const getRef = (section: string): RefObject<HTMLDivElement> | null =>  {
+    switch (section) {
+      case "inicio":
+        return inicioRef;
+      case "sobre":
+        return sobreRef;
+      case "servicos":
+        return servicosRef;
+      case "contato":
+        return contatoRef;
+      default:
+        return null;
+    }
+  }
+
+  const scrollTo = (refName : string) => {
+    if (!refName) return 
+    const ref = getRef(refName);
+    ref?.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 
   useEffect(() => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
@@ -26,7 +61,6 @@ export const SecaoProvider = ({ children }: { children: React.ReactNode }) => {
             classes.find((classe) => classe.startsWith("secao-"))?.split("-")[1] ||
             "";
           setSecaoAtiva(nomeSecao);
-          console.log(nomeSecao);
         }
       });
     };
@@ -47,6 +81,8 @@ export const SecaoProvider = ({ children }: { children: React.ReactNode }) => {
 
   const contextValue = {
     secaoAtiva,
+    getRef,
+    scrollTo,
   };
 
   return (
