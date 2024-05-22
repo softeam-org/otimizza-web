@@ -13,7 +13,7 @@ function Hero() {
           className="w-[600px] h-[400px] object-cover hidden md:block"
         />
         <div className="flex flex-col items-center justify-center gap-6 max-w-[500px]">
-          <h1 className="text-primary font-azonix text-lg text-center md:text-4xl">
+          <h1 className="text-primary font-azonix text-xl text-center md:text-4xl">
             Estamos ao seu lado do início ao fim da obra
           </h1>
           <p className="text-iron-gray font-montserrat text-md text-center md:text-lg">
