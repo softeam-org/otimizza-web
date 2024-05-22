@@ -30,7 +30,7 @@ function AboutUs(): JSX.Element {
           alt="Logo contendo o nome da empresa Otimizza Engenharia"
           className="max-w-44 md:max-w-52"
         />
-      <div className="flex flex-col md:flex-row gap-8 flex-1 items-center">
+      <div className="flex flex-col md:flex-row gap-4 lg:gap-8 flex-1 items-center">
         <Card
           title="Nossa missao"
           text={"Oferecer soluções em Engenharia Civil, garantindo a agilidade, qualidade e satisfação dos clientes, com responsabilidade socioambiental."}
