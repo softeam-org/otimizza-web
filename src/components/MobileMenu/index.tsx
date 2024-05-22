@@ -15,9 +15,11 @@ const sections = [
   {
     name: "servicos",
   },
+  /*
   {
     name: "contato",
   },
+  */
 ];
 
 export function MobileMenu({
