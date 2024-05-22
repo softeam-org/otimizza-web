@@ -9,29 +9,35 @@ import { useSecao } from "@/contexts/useSecao";
 
 const sections = [
   {
-    name: "Início",
+    name: "inicio",
   },
   {
-    name: "Sobre",
+    name: "sobre",
   },
   {
-    name: "Serviços",
+    name: "servicos",
   },
+  /*
   {
-    name: "Contato",
+    name: "contato",
   },
+  */
 ];
 
 export function Header() {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
-  const { secaoAtiva }: { secaoAtiva: string } = useSecao();
+  const { secaoAtiva, scrollTo } = useSecao();
 
-  const handleMobileMenu = () => {
-    setMobileMenu(!mobileMenu);
-    document.body.classList.toggle("overflow-hidden", !mobileMenu);
-  };
+  const openMobileMenu = () => {
+    setMobileMenu(true);
+    document.body.classList.toggle("overflow-hidden", true);
+  }
 
+  const closeMobileMenu = () => {
+    setMobileMenu(false);
+    document.body.classList.toggle("overflow-hidden", false);
+  }
   return (
     <header
       className={`fixed z-10 flex justify-between align-center bg-white lg:min-h-20 lg:py-0 lg:px-16 px-3 py-3 top-0 max-w-[1440px] w-full ${
@@ -45,31 +51,34 @@ export function Header() {
       </div>
       <div className="hidden lg:flex pr-16">
         {sections.map((section) => (
-          <a
+          <button
+            type="button"
             key={section.name}
-            href=""
             className={`flex items-center  font-montserrat h-full text-lg transition hover:bg-secondary hover:text-snow-white ${
               section.name === secaoAtiva ? "bg-secondary text-snow-white" : ""
             }`}
+            onClick={() => {
+              scrollTo(section.name);
+            }}
           >
             <p className="font-azonix px-3.5">
               {section.name.toLocaleUpperCase().replace("SOBRE", "SOBRE NOS")}
             </p>
-          </a>
+          </button>
         ))}
       </div>
       <button
         className="lg:hidden"
         type="button"
         onClick={() => {
-          handleMobileMenu();
+          openMobileMenu();
         }}
       >
         <img src={IconMenu} alt="Menu" />
       </button>
 
       <MobileMenu
-        handleMobileMenu={() => handleMobileMenu()}
+        closeMenu={() => closeMobileMenu()}
         isOpen={mobileMenu}
       />
     </header>
