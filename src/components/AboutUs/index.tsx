@@ -13,6 +13,8 @@ function AboutUs(): JSX.Element {
   
   const ref = getRef('sobre');
 
+
+
   return (
     <div ref={ref} className="secao secao-sobre w-full flex flex-col md:flex-row justify-arround bg-primary py-11 px-3 xsm:px-16 scroll-my-16 xsm:scroll-my-24 text-white items-center font-montserrat text-lg xsm:text-2xl gap-14 md:space-x-30 max-w-1440px">
       <div className="flex flex-col items-center space-y-14 md:space-y-20 flex-1">
