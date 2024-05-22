@@ -17,15 +17,17 @@ const sections = [
   {
     name: "servicos",
   },
+  /*
   {
     name: "contato",
   },
+  */
 ];
 
 export function Header() {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
-  const { secaoAtiva }: { secaoAtiva: string } = useSecao();
+  const { secaoAtiva, scrollTo } = useSecao();
 
   const openMobileMenu = () => {
     setMobileMenu(true);
@@ -49,17 +51,20 @@ export function Header() {
       </div>
       <div className="hidden lg:flex pr-16">
         {sections.map((section) => (
-          <a
+          <button
+            type="button"
             key={section.name}
-            href=""
             className={`flex items-center  font-montserrat h-full text-lg transition hover:bg-secondary hover:text-snow-white ${
               section.name === secaoAtiva ? "bg-secondary text-snow-white" : ""
             }`}
+            onClick={() => {
+              scrollTo(section.name);
+            }}
           >
             <p className="font-azonix px-3.5">
               {section.name.toLocaleUpperCase().replace("SOBRE", "SOBRE NOS")}
             </p>
-          </a>
+          </button>
         ))}
       </div>
       <button
