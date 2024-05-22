@@ -1,7 +1,7 @@
 import { AboutUs } from "@components/AboutUs";
 import { ChooseOtimizza } from "@components/ChooseOtimizza";
 import { Footer } from "@components/Footer";
-import { Form } from "@components/Form";
+//import { Form } from "@components/Form";
 import { Header } from "@components/Header";
 import { Hero } from "@components/Hero";
 import { Services } from "@components/Services";
@@ -18,7 +18,7 @@ function App() {
         <AboutUs />
         <Services />
         <ChooseOtimizza/>
-        <Form />
+        {/*<Form />*/}
         <Footer />
       </div>
     </SecaoProvider>
