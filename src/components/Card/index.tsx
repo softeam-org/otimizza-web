@@ -15,8 +15,8 @@ function Card({ title, text, icon, splitText = false }: CardProps): JSX.Element 
   };
 
   return (
-    <div className="flex flex-col w-full md:max-w-[28rem] min-h-72 px-3 pt-3 font-montserrat bg-snow-white text-primary rounded-xl shadow-card text-base xsm:text-lg text-center">
-      <header className="text-lg xsm:text-xl font-azonix flex items-center justify-center gap-2">
+    <div className="flex flex-col w-full min-w-52 md:max-w-[30rem] h-auto md:min-h-80 px-1 py-3 font-montserrat bg-snow-white text-primary rounded-xl shadow-card text-lg lg:text-xl text-center">
+      <header className="text-sm lg:text-lg xxl:text-2xl font-azonix flex items-center justify-center gap-2">
         {icon} {title}
       </header>
       <div className="pt-3">
