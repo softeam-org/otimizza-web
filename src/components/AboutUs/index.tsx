@@ -1,6 +1,7 @@
 import { Card } from "@components/Card";
 
 import logoOtimizza from "@/assets/logoOtimizza2.svg";
+import { useSecao } from "@/contexts/useSecao";
 import { Target, SketchLogo, Eye } from "@phosphor-icons/react";
 
 const targetIcon = <Target size={24} />;
@@ -8,9 +9,13 @@ const eyeIcon = <Eye size={24} weight="fill" />;
 const sketchIcon = <SketchLogo size={24} />;
 
 function AboutUs(): JSX.Element {
+  const { getRef } = useSecao();
+  
+  const ref = getRef('sobre');
+
   return (
-    <div className="secao secao-sobre w-full flex flex-col justify-arround bg-primary py-11 px-3 xsm:px-16 text-white items-center font-montserrat text-lg md:text-xl xxl:text-2xl gap-14 md:space-x-30 max-w-1440px">
-      <div className="flex flex-col items-center space-y-14 md:space-y-10 flex-1">
+    <div ref={ref} className="secao secao-sobre w-full flex flex-col md:flex-row justify-arround bg-primary py-11 px-3 xsm:px-16 scroll-my-16 xsm:scroll-my-24 text-white items-center font-montserrat text-lg xsm:text-2xl gap-14 md:space-x-30 max-w-1440px">
+      <div className="flex flex-col items-center space-y-14 md:space-y-20 flex-1">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-xl xsm:text-5xl font-azonix">SOBRE NÓS</h1>
           <p className="text-lg xsm:text-2xl">&quot;Seu sonho, nossa responsabilidade&quot;</p>
