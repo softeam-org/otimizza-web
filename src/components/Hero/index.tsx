@@ -1,15 +1,18 @@
 import { Slider } from "@components/Slider";
 
-import presentation from "@/assets/slider_3.jpg";
+import presentation from "@/assets/slider_3.jpeg";
 import { useSecao } from "@/contexts/useSecao";
 import { Envelope, Phone } from "@phosphor-icons/react";
 
 function Hero() {
   const { getRef } = useSecao();
-  
-  const ref = getRef('inicio');
+
+  const ref = getRef("inicio");
   return (
-    <div ref={ref} className="secao secao-inicio items-center justify-center w-full flex flex-col mx-auto scroll-my-16 xsm:scroll-my-20">
+    <div
+      ref={ref}
+      className="secao secao-inicio items-center justify-center w-full flex flex-col mx-auto scroll-my-16 xsm:scroll-my-20"
+    >
       <Slider />
       <div className="flex flex-row gap-16 items-center justify-center p-12 md:p-16">
         <img

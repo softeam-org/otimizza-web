@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-import Slider1 from "@/assets/slider_1.png";
+import Slider1 from "@/assets/slider_1.jpeg";
 import Slider2 from "@/assets/slider_2.jpeg";
-import Slider3 from "@/assets/slider_3.jpg";
+import Slider3 from "@/assets/slider_3.jpeg";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 
 interface Slide {
