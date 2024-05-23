@@ -26,6 +26,8 @@ export const SecaoProvider = ({ children }: { children: React.ReactNode }) => {
   const sobreRef = useRef<HTMLDivElement | null>(null);
   const servicosRef = useRef<HTMLDivElement | null>(null);
   const contatoRef = useRef<HTMLDivElement | null>(null);
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
   
 
   const getRef = (section: string): RefObject<HTMLDivElement> | null =>  {
@@ -53,6 +55,9 @@ export const SecaoProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -65,19 +70,21 @@ export const SecaoProvider = ({ children }: { children: React.ReactNode }) => {
       });
     };
 
+
     const observer = new IntersectionObserver(handleIntersection, {
-      root: null, 
-      rootMargin: "0px",
-      threshold: 0.5,
+
+      threshold: windowSize < 768 ? 0.3 : 0.5 ,
     });
 
     secoesRef.current = document.querySelectorAll(".secao");
     secoesRef.current.forEach((secao) => observer.observe(secao));
+    window.addEventListener('resize', handleResize);
 
     return () => {
       secoesRef.current?.forEach((secao) => observer.unobserve(secao));
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [windowSize]);
 
   const contextValue = {
     secaoAtiva,
