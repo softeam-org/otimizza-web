@@ -65,10 +65,12 @@ export const SecaoProvider = ({ children }: { children: React.ReactNode }) => {
       });
     };
 
+    const width = window.innerWidth
+
     const observer = new IntersectionObserver(handleIntersection, {
       root: null, 
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: width < 768 ? 0.3 : 0.5,
     });
 
     secoesRef.current = document.querySelectorAll(".secao");
