@@ -8,11 +8,11 @@ function Footer(): JSX.Element {
         <div className="flex flex-col gap-2.5">
           <div className="flex items-center gap-1">
             <MapPin weight="fill" width={24} height={24} />
-            <p>Rua tal, n° tal, Bairro Tal, Conj Tal, Cidade - UF</p>
+            <p>Rua Bela Vista, n° 237, Centro, Ponto Novo - BA</p>
           </div>
           <div className="flex items-center gap-1">
             <Phone weight="fill" width={24} height={24} />
-            <p>(74) 9 8145-4940 / 9 9975-5335</p>
+            <p>(74) 9 9975-5335</p>
           </div>
           <div className="flex items-center gap-1">
             <Envelope width={24} height={24} />
@@ -31,7 +31,14 @@ function Footer(): JSX.Element {
       <div className="py-1 h-9 max-md:py-5 xsm:py-8 md:py-1 max-md:justify-center max-md:flex-col px-3 bg-midnight-blue flex items-center justify-between w-full">
         <p>Otimizza Engenharia - CNPJ 37.122.815/0001-53</p>
         <p>
-          Desenvolvido por <a href="https://softeam.com.br/" target="_blank" rel="noopener noreferrer"><strong>Softeam</strong></a>
+          Desenvolvido por{" "}
+          <a
+            href="https://softeam.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>Softeam</strong>
+          </a>
         </p>
       </div>
     </footer>
