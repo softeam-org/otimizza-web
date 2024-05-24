@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Instala o pnpm
-      - uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v3
         with:
           version: 8
       - name: Gerencia versão do NodeJS
@@ -28,7 +28,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
       - name: Instala as dependências
-      - run: pnpm install --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
       - name: Inicia Build do projeto
         run: pnpm run build
       - name: Sincroniza com o servidor
