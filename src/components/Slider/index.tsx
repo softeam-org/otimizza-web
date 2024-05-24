@@ -13,7 +13,7 @@ interface Slide {
 function Slider() {
   const [slideShow] = useState<Slide[]>([
     {
-      title: "Acompanhamento",
+      title: "Gerenciamento de obras",
       image: Slider1,
     },
     {
