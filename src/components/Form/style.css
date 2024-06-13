@@ -1,0 +1,5 @@
+.form-otimizza {
+  background: linear-gradient(0deg, rgba(14, 19, 31, 0.75) 0%, rgba(14, 19, 31, 0.75) 100%), url('src/assets/images/formBg.svg');
+  background-size: cover;  
+  background-position: center; 
+}
