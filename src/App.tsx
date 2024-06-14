@@ -5,7 +5,7 @@ import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
 import { Hero } from "@components/Hero";
 import { Services } from "@components/Services";
-
+import { WhatsappButton } from "@components/WhatsappButton";
 
 import { SecaoProvider } from "./contexts/useSecao";
 
@@ -20,6 +20,7 @@ function App() {
         <ChooseOtimizza/>
         {/*<Form />*/}
         <Footer />
+        <WhatsappButton />
       </div>
     </SecaoProvider>
   );
