@@ -17,11 +17,9 @@ const sections = [
   {
     name: "servicos",
   },
-  /*
   {
     name: "contato",
   },
-  */
 ];
 
 export function Header() {
@@ -32,12 +30,12 @@ export function Header() {
   const openMobileMenu = () => {
     setMobileMenu(true);
     document.body.classList.toggle("overflow-hidden", true);
-  }
+  };
 
   const closeMobileMenu = () => {
     setMobileMenu(false);
     document.body.classList.toggle("overflow-hidden", false);
-  }
+  };
   return (
     <header
       className={`fixed z-10 flex justify-between align-center bg-white lg:min-h-20 lg:py-0 lg:px-16 px-3 py-3 top-0 max-w-[1440px] w-full ${
@@ -77,10 +75,7 @@ export function Header() {
         <img src={IconMenu} alt="Menu" />
       </button>
 
-      <MobileMenu
-        closeMenu={() => closeMobileMenu()}
-        isOpen={mobileMenu}
-      />
+      <MobileMenu closeMenu={() => closeMobileMenu()} isOpen={mobileMenu} />
     </header>
   );
 }

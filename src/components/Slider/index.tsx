@@ -17,11 +17,11 @@ function Slider() {
       image: Slider1,
     },
     {
-      title: "Execução",
+      title: "Realização de execução de obras",
       image: Slider2,
     },
     {
-      title: "Projeto",
+      title: "Desenvolvimento de projetos de engenharia",
       image: Slider3,
     },
   ]);
